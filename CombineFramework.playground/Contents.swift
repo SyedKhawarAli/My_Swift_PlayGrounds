@@ -91,3 +91,18 @@ class MyViewController : UIViewController {
 
 let viewController = MyViewController()
 PlaygroundPage.current.liveView = viewController
+
+//MARK: observer on model of user for user name
+public class User {
+    @Published var name: String
+    public init(name: String){
+        self.name = name
+    }
+}
+let user = User(name: "khawar")
+let publisher = user.$name
+var subscriber: AnyCancellable = publisher.sink {
+    print("user name is \($0)")
+}
+user.name = "Khawar Ali"
+
