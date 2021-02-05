@@ -1,32 +1,30 @@
 
-//MARK: - Searching
+// MARK: - Searching
 
-//Linear search
+// Linear search
 
-//Binary search
+// Binary search
 
+// MARK: - Sorting
 
-//MARK: - Sorting
+// Bubble sort
 
-//Bubble sort
+// Selection sort
 
-//Selection sort
+// Insertion sort
 
-//Insertion sort
+// Merg sort
 
-//Merg sort
+// Quick sort
 
-//Quick sort
+// Heap sort
 
-//Heap sort
+// MARK: - extra
 
+let arr = [12, 1234, 45, 67, 1]
 
-//MARK:- extra
-let arr = [ 12, 1234, 45, 67, 1 ]
-
-//print(arr.max())
+// print(arr.max())
 
 for i in stride(from: 0, to: 10, by: 2) {
     print(i)
 }
-
