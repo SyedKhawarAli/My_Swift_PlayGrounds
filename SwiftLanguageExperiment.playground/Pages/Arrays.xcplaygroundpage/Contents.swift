@@ -132,3 +132,39 @@ var s = [0] {
 }
 
 s.append(1)
+
+// MARK: - Enum test
+enum City: String {
+    var string: String {
+        rawValue
+    }
+    case test = "testing"
+}
+let city = City.test
+
+print(city.string)
+
+
+extension Optional {
+    func isNil() -> Bool { self == nil }
+}
+
+extension Optional where Wrapped == Bool {
+    func isTrue() -> Bool { self == true }
+    func isFalse() -> Bool { self == false }
+}
+
+extension Optional where Wrapped: Collection {
+    func isNilOrEmpty() -> Bool { self == nil || self?.isEmpty == true }
+}
+
+let numbersList = [3, 7, 4, -2, 9, -6, 10, 1]
+if let firstNegative = numbersList.first(where: { $0 > 50 }) {
+    print("The first negative number is \(firstNegative).")
+}
+
+let array = ["FOO", "FOO", "BAR", "FOOBAR"]
+let array2 = ["FOO", "BAR", "FOOBAR"]
+for item in array2 {
+    print(array.filter({$0 == item}).count)
+}

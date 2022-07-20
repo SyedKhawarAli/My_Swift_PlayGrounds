@@ -1,0 +1,1 @@
+// TODO: Bridge design pattern
